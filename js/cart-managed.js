@@ -471,10 +471,10 @@ form.addEventListener('submit', async (event) => {
     //formData.append('cart', JSON.stringify(cart));
     //formData.append('secret', 'kru56Zdf09m3Jkh4hHOJDjkhoer65249erGd34X'); //TODO - тестируется без строки! при необходимости - вернуть!
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbxPpwX3il5Lkd11n6G-3etGrS2jUEwllCuUKqLfhDyUUE0CoTYmiZMPdmqJA4rwiH0Qrw/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbw6GWsl9XCPRhcOmQN7ymx3u-CfhjzfWkV2ThEGH-A74ESYBvbWWjUsjGwYlqQnaUrj/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ phone, cart, secret: 'kru56Zdf09m3Jkh4hHOJDjkhoer65249erGd34X' })
+      body: JSON.stringify({ phone, cart, secret: 'F0ewmuO0jmnnhSFfreoHG' })
     });
 
     const text = await response.text();
