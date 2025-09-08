@@ -17,7 +17,7 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch('https://github.com/leatherproject/shop/data/data.json');        
+    const response = await fetch('https://leatherproject.github.io/shop/data/data.json');        
 
     if (!response.ok) throw new Error('500 Internal Server Error');
         
