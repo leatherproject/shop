@@ -469,10 +469,13 @@ form.addEventListener('submit', async (event) => {
     //const formData = new FormData();
     //formData.append('phone', phone);
     //formData.append('cart', JSON.stringify(cart));
-    //formData.append('secret', 'F0ewmuO0jmnnhSFfreoHG'); //TODO - тестируется без строки! при необходимости - вернуть!
+    //formData.append('secret', 'kru56Zdf09m3Jkh4hHOJDjkhoer65249erGd34X'); //TODO - тестируется без строки! при необходимости - вернуть!
 
-    const response = await fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbygVz6vvXjlIsA2C_ZworjnMrintVyRbge96MCygwGtF19vCVh5RXj_jmEuLvcCsr4X/exec?phone=${encodeURIComponent(phone)}&cart=${encodeURIComponent(JSON.stringify(cart))}&secret=F0ewmuO0jmnnhSFfreoHG`);
-
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxF416n0iPITCupShFBamA0fN-EWfywuBZhY7QHi8zNs1UIK0upzZZtbQzPYWEOhXwB/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone, cart, secret: 'DSFVRE554iunygfvnh' })
+    });
 
     const text = await response.text();
 
