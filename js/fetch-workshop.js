@@ -13,7 +13,7 @@ const slogan = document.querySelector('[data-top-slogan]');
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const modalLayer = document.querySelector('.swiper-modal__layer');
 
-const API_URL = window.AppConfig.API_URL;
+//const API_URL = window.AppConfig.API_URL;
 
 async function fetchData() {
     try {
@@ -24,7 +24,11 @@ async function fetchData() {
         faqContainerProcess.innerHTML = '<p class="loading">Process...</p>';
         
         // Запрос к серверу
-        const response = await fetch(API_URL);  
+        //const response = await fetch(API_URL);  
+
+        //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
+        //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
+        const response = await fetch('./data/data.json', { cache: 'no-cache' });
 
         if (!response.ok) {
             throw new Error('500 Internal Server Error');
