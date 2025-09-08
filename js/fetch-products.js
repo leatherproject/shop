@@ -14,7 +14,7 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch('https://drive.google.com/uc?export=download&id=1LiMXZk74mYtxlOXeKINt0OxwmeHvmM2d');        
+    const response = await fetch('https://github.com/leatherproject/shop/blob/main/data/data.json');        
 
     if (!response.ok) throw new Error('500 Internal Server Error');
         
