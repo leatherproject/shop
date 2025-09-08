@@ -7,6 +7,9 @@ const title = document.querySelector('[data-top-title]');
 const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
+// Используем API из объекта AppConfig
+//const API_URL = window.AppConfig.API_URL;
+
 //
 let products = [];
 
