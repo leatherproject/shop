@@ -1,0 +1,165 @@
+/* Модальные окна */
+.modal {  
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  /*flex-direction: column; /*убирает ненужное растяжение контейнера на весь экран*/
+  justify-content: center;
+  top: 0;
+  left: 0;   
+  right: 0;
+  bottom: 0;
+  padding: 0 5px;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  cursor: pointer;  	
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.modal--lightbox {
+  flex-direction: column;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-basis: auto; /* 80% для верт. изобр. */
+  background-color: white;
+  top: 0;
+  right: 0;		  
+  left: 0;
+  bottom: 0; 	
+  min-width: 300px;
+  min-height: 300px;     
+  margin: auto;       
+  z-index: 2;  
+  padding: 0;
+  text-align: center;
+  border-radius: 3px;
+  cursor: default;
+  transition: 0.3s ease;
+}
+
+@keyframes modalExpand {
+  0% {
+    padding: 0 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.modal-img {
+  display: block;
+  max-width: 100%; 
+  max-height: 100%;  
+  margin: auto;
+  object-fit: cover;
+  cursor: default;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);   	 
+}
+
+@keyframes fadeInImage {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+.modal-view {
+  display: flex;
+  cursor: pointer;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; visibility: hidden; }
+  to { opacity: 1; visibility: visible; }
+}
+
+.modal-hide {
+  display: flex;
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; visibility: visible; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@media screen and (orientation: landscape) { 
+.modal-content--lightbox {     
+      max-width: calc(78%); /*TODO*/                  
+      margin: 8px auto;   
+    }
+}
+@media screen and (min-width: 955px) {  
+.modal-content--lightbox { 
+      max-width: 720px;   
+      margin: 8px auto;        
+    }
+}
+
+@media screen and (orientation: landscape) { 
+.modal-content--xSwiper {     
+      max-width: calc(55%);                 
+    }
+}
+@media screen and (min-width: 955px) {  
+.modal-content--xSwiper { 
+      max-width: 640px;      
+    }
+}
+
+@media screen and (min-width: 1100px) {  
+.modal-content--xSwiper { 
+      max-width: 720px;   
+    }
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.close {
+  display: inline-block;
+  position: absolute;	
+  top: calc(-50px );
+  right: calc(0px);	
+  font-size: 37px;	
+  color: silver;
+  z-index: 3;
+  transition: 0.2s;  
+  cursor: pointer;        
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (orientation: landscape) {    
+  .close {
+    content: "\f057";
+    top: calc(0px);
+    right: calc(-50px);
+    font-size: 37px;
+  }
+}
+
+.loading-message {
+  position: absolute;
+  padding: 5px;
+  font-size: 18px;
+  color: #333;
+  animation: modalExpand 0.2s ease-in-out;
+}
+
+.image-not-found {
+  bottom: 20%;
+}

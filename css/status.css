@@ -1,0 +1,44 @@
+.loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #757575;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .not-found {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #757575;
+      font-size: 22px;
+      text-align: center;
+    }
+    
+    .error-500 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #757575;
+      font-size: 22px;
+      font-weight: 700;
+      border: 1px solid red;
+      border-radius: 5px;
+      text-align: center;
+      width: 100%;
+    }    
+
+    .error-500--fullscr {
+      width: auto;
+    }
+
+    .error-500::before {
+      content: "\2716 "; /* Юникод символа ✖ */ /* или в html <p>&#10006; ${error.message}</p> */
+      margin-right: 7px;
+      color: red;
+      font-weight: bold;
+    }

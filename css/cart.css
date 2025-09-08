@@ -1,0 +1,659 @@
+.cart-panel {  
+  position: fixed; 
+  top: 82px;  /* "выезд" корзины снизу-вверх или сверху-вниз - использовать только bottom или top соответствено*/
+  left: 0;
+  right: 0; 
+  bottom: 44px;
+  z-index: 50;
+  
+  overflow: auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  opacity: 0;
+  visibility: hidden; /*TODO или transform: translateY(100%); */
+
+  transition: 0.2s; 
+}
+
+@media screen and (max-width: 960px) {
+  .cart-panel {
+    top: 45px;
+  }
+}
+
+.cart-panel__close-btn {
+  display: inline-block;
+  position: absolute;	
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  color: #9c9c9c;
+  z-index: 3;
+  transition: 0.2s;  
+  cursor: pointer;        
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: 1px solid #9c9c9c;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.cart-visible {
+  opacity: 1;
+  visibility: visible; /*TODO или  transform: translateY(0%); */
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;  /* "выезд" корзины снизу-вверх или сверху-вниз - использовать только bottom или top соответствено*/
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.cart-overlay-view {
+  animation: fadeInOverlay 0.2s forwards;
+}
+
+.cart-overlay-hide {
+  animation: fadeOutOverlay 0.2s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  from {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.cart-icon {
+  position: absolute;  
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  height: 24px;
+  margin: auto 0; 
+  color: silver;
+  cursor: pointer;  
+  @media screen and (max-width: 960px) {
+    right: 65px;
+  }  
+}
+
+.cart-icon__icon {  
+  color: #999999;  
+  font-size: 24px;   
+}
+
+.cart-icon__count-badge {
+  display: none;
+  top: -10px;
+  right: -10px; 
+  flex-direction: row;		
+  justify-content: center; 
+  align-items: center;
+  padding: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; 
+  font-size: 13px;
+  font-family: sans-serif; 
+  font-weight: 700;
+  background: #e8721b; 
+  color: #fff;               
+}
+
+.count-badge--visible {
+  display: flex;
+  position: absolute;
+}
+
+/**/
+.cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0px 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  .cart {
+    display: block;
+  }
+}
+
+.cart-item {
+  position: relative;
+  flex: 1;
+  flex-basis: 33.333%;
+  margin-top: 10px;
+  border-bottom: 1px dotted #616161;
+  color: #616161;
+}
+
+.cart-item__option-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cart-item__option-wrapper--colors {  
+  min-height: 80px;
+  padding: 0;
+  gap: 10px;
+}
+
+.cart-item__option-wrapper--size {
+  min-height: 50px;
+  padding: 0;
+  gap: 20px;
+}
+
+.cart-item__option-customized {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.cart-item__info-type {
+  margin-top: 15px;
+  font-size: 14.4px;
+}
+
+.cart-item__info-color {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  font-size: 14.4px;
+  padding-top: 25px;
+  margin: 0 55px 40px 0;
+  cursor: pointer;
+}
+
+.cart-item__info-size {
+  font-size: 14.4px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.cart-item__customized-label {
+  font-size: 14.4px;
+}
+
+.cart-item__customized-result {
+  display: inline-block;
+  min-width: 50px;
+  padding: 2px;
+  font-size: 16px;
+  text-align: left;
+  color: #007acc;
+}
+
+.cart-item__customized-input {
+  min-width: 24px; 
+  padding: 8px;
+  font-size: 16px;
+  -moz-appearance: textfield; /* убирает стрелочки "вверх-вниз" в инпуте */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cart-item__customized-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  background-color: #fff;
+}
+
+.input--error {
+  border: 1px solid red !important;
+  outline: none !important;
+}
+
+.fas.fa-trash-alt {
+  font-size: 16px;
+}
+
+.cart-item__customized-btn {
+  margin-left: 0;
+  font-size: 16px;
+  color: #007acc;
+  text-transform: uppercase;
+}
+
+.color--selected {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+  border-radius: 50%;
+  color: #373737;
+}
+
+.size--selected {
+  outline: 2px solid #007acc;
+  border-radius: 3px;
+  color: #373737;
+}
+
+.cart-item__info-color--undefined {
+  display: none;
+}
+
+.cart-item__info-size--undefined {
+  visibility: hidden;
+}
+
+.cart-item__option-size--hidden {
+  visibility: hidden;
+}
+
+.cart-item__option-customized--undefined {
+  visibility: hidden;
+}
+
+.preview {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.model,
+.name,
+.color {
+  font-size: 0.9em; 
+}
+
+.price {
+  font-size: 1em;
+}
+
+.cart-item__controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item__qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  font-size: 19.2px;
+}
+
+.cart-item__minus-btn {
+  margin-bottom: -2px;
+  font-size: 1.3em;
+}
+
+.cart-item__plus-btn {
+  font-size: 1.7em;
+}
+
+.cart-item__minus-btn,
+.cart-item__plus-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: #FF7000;
+}
+
+.disabled-btn {
+  color: silver;
+  pointer-events: none;
+}
+
+.btn-remove {
+  position: absolute;
+  left: 120px;
+  margin: auto;
+  color: #9c9c9c;
+}
+
+.cart-bottom {
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f5f3e7;
+}
+
+.cart-bottom__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;      
+}
+
+@media screen and (max-width: 350px) {
+  .cart-bottom__controls {
+    padding: 0 7px;
+  }
+}
+
+.cart-bottom__clear-btn {
+  margin: 7px 0;
+  color: #9c9c9c;
+}
+
+.cart-bottom__order-btn {
+  position: relative;
+  margin: 7px 0;
+  padding: 3px;
+  font-size: 0.8em;
+  font-weight: 700;
+  background: #e8721b;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.cart-bottom__order-warning {
+  position: absolute;
+  color: #70706f;
+  font-weight: 500;
+  top: -45px;
+  left: 0;
+  font-size: 14px;
+}
+
+.price-total {
+  display: block;
+  margin: 10px;
+  font-size: 1em;
+  color: #616161;
+}
+
+/* === Custom Base Styles === */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  color: #616161;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  top: 82px;  
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  background: rgba(256, 256, 256, 0.9);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+@media screen and (max-width: 960px) {
+  .form-overlay {
+    top: 45px;
+  }
+}
+
+.form-overlay-view {
+  animation: fadeInOverlay 0.2s forwards;
+}
+
+.form-overlay-hide {
+  animation: fadeOutOverlay 0.2s forwards;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  from {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.order-form__input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.order-form__input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  background-color: #fff;
+}
+
+.order-form__input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.order-form__input:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.order-form__btns-wrapper {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.order-form__send-btn {
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 3px;
+  background: #01C55A;
+  color: #fff;
+}
+
+.order-form__cancel-btn {
+  padding: 4px 8px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #9c9c9c;
+  color: #9c9c9c;
+}
+
+/* чек-бокс */
+/* Прячем нативный чекбокс, но оставляем его доступным для кликов */
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Стиль контейнера для галочки */
+.checkbox__label {
+  position: relative;
+  padding-left: 26px; /* место для кастомной галочки */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Квадратик */
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Галочка */
+.checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg) scale(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+/* Когда чекбокс выбран */
+.checkbox__input:checked + .checkbox__label::before {
+  background-color: #007BFF;
+  border-color: #007BFF;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  transform: rotate(-45deg) scale(1);
+}
+
+/* Ошибка - красная рамка */
+.checkbox__input.input--error + .checkbox__label::before {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+
+.checkbox__conditions-link {
+  color: #2013ad;
+}
+
+/**/
+
+.btn-ok {
+  display: none;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 3px;
+  background: #01C55A;
+  color: #fff;
+}
+
+.btn-close {
+  display: none;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 5px;
+  background: #646464;
+  color: #fff;
+}
+    
+.cart__dialog-overlay {  
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;   
+  right: 0;
+  bottom: 0;
+  padding: 0 5px;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  cursor: pointer;  	
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.cart__dialog {     
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.cart__dialog button {
+  margin-top: 10px;
+}
+
+.c-dialog-view {
+  display: flex;
+  cursor: pointer;
+  animation: fadeIn-dialog 0.2s forwards;
+}
+
+@keyframes fadeIn-dialog {
+  from { opacity: 0; visibility: hidden; }
+  to { opacity: 1; visibility: visible; }
+}
+
+.c-dialog-hide {
+  display: flex;
+  animation: fadeOut-dialog 0.2s forwards;
+}
+
+@keyframes fadeOut-dialog {
+  from { opacity: 1; visibility: visible; }
+  to { opacity: 0; visibility: hidden; }
+}
+

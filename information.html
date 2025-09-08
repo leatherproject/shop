@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fontawesome/fontcss/all.min.css">
+
+  <link rel="stylesheet" href="css/normalize.css"> 
+  <link rel="stylesheet" href="css/status.css">
+  <link rel="stylesheet" href="css/layout.css">   
+  <link rel="stylesheet" href="css/information.css">
+  <link rel="stylesheet" href="css/cart.css">
+
+<!--
+  <link rel="stylesheet" href="css/style.min.css">
+-->
+  
+  
+  <title>Информация</title>
+  <style>    
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+<header class="header">
+        <div class="mobile-layer"></div>
+        <div class="container">
+          <div class="header__inner">
+            <a href="index.html" class="header__logo-link">
+              <img class="header__logo-image" src="logo/logo.png" alt="logo">
+            </a>
+
+            <div id="cart-icon" class="cart-icon cart-btn">
+             <i class="cart-icon__icon fas fa-shopping-cart"></i>
+             <div class="cart-icon__count-badge count-badge">
+               <span class="cart-icon__count"></span>
+              </div>
+            </div>
+
+            <button class="menu-btn"><i class="menu-icon fas fa-bars"></i></button>
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="products.html" class="menu__link">Товары
+                  <span class="menu__mark menu__mark--new js-mark">новинка</span>
+                  <span class="menu__mark menu__mark--order">на заказ</span></a></li>
+                <li class="menu__item"><a href="gallery.html" class="menu__link">Галерея</a></li>
+                <li class="menu__item"><a href="workshop.html" class="menu__link">Мастерская</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--active">Информация</a></li>
+             </ul>
+           </nav>
+          </div>
+        </div>
+      </header>
+
+<main class="main">
+
+<div class="top-page--information" data-top-image>
+<div class="container"> 
+<div class="top-page__inner--information">
+      <h1 class="top-page__title--information" data-top-title></h1>
+      <p class="top-page__slogan--information"  data-top-slogan>
+      </p>
+ </div>     
+    </div>
+  </div>
+
+    <div id="cartOverlay" class="cart-overlay">     
+    </div>
+    <div class="cart-panel">
+      <span class="cart-panel__close-btn">Закрыть</span> 
+      <div class="container">
+        <div class="cart-bottom">
+          <div class="cart-bottom__controls">
+            <button class="cart-bottom__clear-btn js-clear-all fas fa-trash-alt"></button>
+            <span class="price-total"></span>
+            <button id="openOrderBtn" class="cart-bottom__order-btn">Оформить заказ
+              <span class="cart-bottom__order-warning js-order-warning"></span>
+            </button>
+          </div>
+        </div>
+
+        <div id="formOverlay" class="form-overlay">
+          <form id="orderForm" class="order-form" novalidate>
+            <label for="phoneInput">Введите номер телефона:</label><br>
+            <input type="tel" inputmode="tel" id="phoneInput" class="order-form__input" placeholder="+380..." autocomplete="tel">
+            <span class="error-message" id="phoneError" aria-live="polite"></span>
+
+            <div class="checkbox"> 
+              <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+              <label for="formAgreement" class="checkbox__label">
+               <span>Я соглашаюсь 
+                 <a class="checkbox__conditions-link" href="information.html">с условиями</a>*
+               </span>
+              </label>
+            </div>
+
+            <div class="order-form__btns-wrapper">
+              <button type="button" id="closeOrderBtn" class="order-form__cancel-btn">cancel</button>
+              <button type="submit" id="sendOrderBtn" class="order-form__send-btn">oк</button>
+            </div>
+          </form>
+        </div>
+      
+        <div class="cart js-cart"></div>
+      </div>
+    </div>
+
+    <div class="cart__dialog-overlay">
+      <div id="cartDialog" class="cart__dialog">
+        <p id="modalMessage"></p>
+        <button id="closeModalBtn" class="btn-close">Закрыть</button>
+        <button id="okBtn" class="btn-ok">Ok</button>
+      </div>
+    </div>
+  
+<!--статьи-->
+<section class="s-information">
+  <div class="container">
+    <h2 class="s-information__title">Информация</h2>
+    <div class="article article--info"></div>
+    <div class="article article--payment"></div>
+    <div class="article article--privacy"></div>
+  </div>
+</div>
+
+<div class="social-mobile">
+        <span class="social-mobile__base-icon fas fa-users"></span>
+                 
+        <a class="social-mobile__link first--direction_up" href="">
+          <span class="social-mobile__icon fab fa-instagram"></span>             
+        </a>
+                   
+        <a class="social-mobile__link second--direction_up" href="">
+          <span class="social-mobile__icon fab fa-telegram-plane"></span> 
+        </a>
+                    
+        <a class="social-mobile__link third--direction_up" href="">
+          <span class="social-mobile__icon fab fa-facebook-f"></span>
+        </a>
+      </div>
+
+</main>
+
+
+<footer class="footer" style="background-image: url(img/IMG_20250226_113219199-Photoroom.png);">
+  <div class="container">
+        <div class="footer__content">
+          <p class="company">2016 - <script>document.write(new Date().getFullYear());</script>
+                               
+          </p>
+        </div>
+  </div>
+      </footer>
+
+</div>
+
+  <script src="js/config.js"></script> 
+  <script src="js/disable-scroll.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/color-map.js"></script>
+  <script src="js/fetch-information.js"></script>
+  <script src="js/price-formatter.js"></script>
+  <script src="js/cart-managed.js"></script>
+ 
+<!--
+  <script src="js/config.js"></script>  
+  <script src="js/in_app.min.js"></script>
+--> 
+
+</body>
+</html>
+

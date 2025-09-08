@@ -1,0 +1,453 @@
+{
+  "data": [
+    {
+      "page": "ourProducts",
+      "type": "top",
+      "group": "default",
+      "image": "img/IMG_20250304_181732644.jpg",
+      "title": "Изделия из кожи",
+      "slogan": "Для ценителей всего настоящего и натурального!",
+      "offer": "Как создаются изделия из кожи?",
+      "link": " Ознакомьтесь с нашей мастерской"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "WA24TR",
+      "name": "Кошелёк женский",
+      "preview": "img/webp/IMG_WA24TR_1.webp",
+      "imageModal": [
+        "img/IMG_WA24TR_1.jpg",
+        "img/IMG_WA24TR_2.jpg",
+        "img/IMG_WA24TR_3.jpg",
+        "img/IMG_WA24TR_4.jpg",
+        "img/IMG_WA24TR_5.jpg",
+        "img/IMG_WA24TR_6.jpg"
+      ],
+      "size": "194 Х 100 мм",
+      "description": "Вместимость: 4 карт, куп. номиналом 500 евро",
+      "price": 900,
+      "new": true,
+      "limit": 2,
+      "category": "wallet",
+      "color1": "охра",
+      "color2": "тёмно-бордовый",
+      "color3": "тёмно-каштановый",
+      "color4": "чёрный/охра"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "RWOOD0NIC3M",
+      "name": "Ремень мужской",
+      "preview": "img/IMG_RWOOD0NIC3M.jpg",
+      "imageModal": [
+        "img/IMG_RWOOD0NIC3M.jpg"
+      ],
+      "size": "Индивидуально",
+      "description": "Ремень мужской, кожа - ременной ворот, толщ. 3-3,5 мм",
+      "price": 950,
+      "limit": 4,
+      "category": "belt",
+      "color1": "бордово-коричневый",
+      "width1": "40 мм",
+      "width2": "35 мм"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "RWOOD0ANT2M",
+      "name": "Ремень мужской",
+      "preview": "img/webp/IMG_RWOOD0ANT2M_2.webp",
+      "imageModal": [
+        "img/IMG_RWOOD0ANT2M_2.jpg",
+        "img/IMG_RWOOD0ANT2M_1.jpg"
+      ],
+      "size": "Индивидуально",
+      "description": "Ремень мужской, кожа - ременной ворот, толщ. 3-3,5 мм",
+      "price": 950,
+      "limit": 4,
+      "category": "belt",
+      "color1": "бордово-коричневый",
+      "width1": "40 мм",
+      "width2": "35 мм"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "WA28TR2VEG",
+      "name": "Кошелёк женский",
+      "preview": "img/webp/IMG_WA28TR2VEG_1.webp",
+      "imageModal": [
+        "img/IMG_WA28TR2VEG_2.jpg",
+        "img/IMG_WA28TR2VEG_3.jpg",
+        "img/IMG_WA28TR2VEG_4.jpg",
+        "img/IMG_WA28TR2VEG_1.jpg"
+      ],
+      "size": "200 x 105 мм",
+      "description": "Вместимость: 8 карт, куп. номиналом 500 евро",
+      "price": 1500,
+      "new": true,
+      "limit": 1,
+      "category": "wallet",
+      "color1": "коричневый/коньяк",
+      "color2": "коньяк/бежевый"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "WA14TRHF",
+      "name": "Кошелёк женский",
+      "preview": "img/webp/IMG_WA14TRHF_1.webp",
+      "imageModal": [
+        "img/IMG_WA14TRHF_3.jpg",
+        "img/IMG_WA14TRHF_4.jpg",
+        "img/IMG_WA14TRHF_1.jpg",
+        "img/IMG_WA14TRHF_2.jpg"
+      ],
+      "size": "200 х 100 мм",
+      "description": "Вместимость: 4 карты, паспорт/куп. номиналом 500 евро",
+      "price": 850,
+      "limit": 2,
+      "category": "wallet",
+      "color1": "тёмно-бордовый",
+      "color2": "тёмно-каштановый",
+      "color3": "охра"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "WA2Z8TR",
+      "name": "Кошелек женский",
+      "preview": "img/webp/IMG_WA2Z8TR_4.webp",
+      "imageModal": [
+        "img/IMG_WA2Z8TR_1.jpg",
+        "img/IMG_WA2Z8TR_2.jpg",
+        "img/IMG_WA2Z8TR_3.jpg",
+        "img/IMG_WA2Z8TR_4.jpg",
+        "img/IMG_WA2Z8TR_5.jpg",
+        "img/IMG_WA2Z8TR_8.jpg",
+        "img/IMG_WA2Z8TR_6.jpg",
+        "img/IMG_WA2Z8TR_7.jpg"
+      ],
+      "size": "197 Х 110 мм",
+      "description": "Вместимость: 8 карт, 2 паспорта/куп. номиналом 500 евро, отдел на молнии",
+      "price": 1800,
+      "limit": 1,
+      "category": "wallet",
+      "color1": "тёмно-каштановый",
+      "color2": "тёмно-бордовый",
+      "color3": "охра"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "EDGE0NIC2M",
+      "name": "Ремень мужской/женский",
+      "preview": "img/webp/IMG_EDGE0NIC2M_1.webp",
+      "imageModal": [
+        "img/IMG_EDGE0NIC2M_2.jpg",
+        "img/IMG_EDGE0NIC2M_3.jpg",
+        "img/IMG_EDGE0NIC2M_4.jpg",
+        "img/IMG_EDGE0NIC2M_1.jpg"
+      ],
+      "size": "Индивидуально",
+      "description": "Ремень мужской/женский, кожа - чепрак, толщ. 4 мм",
+      "price": 1100,
+      "new": true,
+      "limit": 4,
+      "category": "belt",
+      "color1": "чёрный",
+      "width1": "40 мм",
+      "width2": "35 мм"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "GGRO0NIC2M",
+      "name": "Ремень мужской/женский",
+      "preview": "img/webp/IMG_GGRO0NIC2M_2.webp",
+      "imageModal": [
+        "img/IMG_GGRO0NIC2M_1.jpg",
+        "img/IMG_GGRO0NIC2M_3.jpg",
+        "img/IMG_GGRO0NIC2M_2.jpg"
+      ],
+      "size": "Индивидуально",
+      "description": "Ремень мужской/женский, кожа - чепрак, толщ. 4 мм",
+      "price": 1100,
+      "limit": 4,
+      "category": "belt",
+      "color1": "шоколадный",
+      "width1": "40 мм",
+      "width2": "35 мм"
+    },
+    {
+      "page": "ourProducts",
+      "type": "products",
+      "group": "default",
+      "model": "BA0SH0H2",
+      "name": "Сумка женская - шоппер",
+      "preview": "img/shopper.jpg",
+      "imageModal": [
+        "img/leather_shopper_bag-2-1220.jpg",
+        "img/leather_shopper_bag-4-1220.jpg"
+      ],
+      "size": "300 x 150 x 225 мм",
+      "description": "Женская повседневная сумка - шоппер",
+      "price": 2500,
+      "limit": 1,
+      "category": "bag",
+      "color1": "серо-оливковый",
+      "color2": "бежевый",
+      "color3": "светло-коричневый"
+    },
+    {
+      "page": "gallery",
+      "type": "top",
+      "group": "default",
+      "image": "img/IMG_20250307_090857494.jpg",
+      "title": "Изделия из кожи",
+      "slogan": "Для ценителей всего настоящего и натурального!",
+      "offer": "Как создаются изделия из кожи?",
+      "link": " Ознакомьтесь с нашей мастерской"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Изготовлен вручную из натуральной кожи",
+      "alt": "picture 1",
+      "preview": "img/womens_leather_walleto-1-1220.jpg",
+      "imageModal": "img/2-womens_wallet.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Просторная и стильная для повседневного использования",
+      "alt": "picture 2",
+      "preview": "img/leather_travel_bag-1220.jpg",
+      "imageModal": "img/leather_travel_bag-1220.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Для повседневного использования",
+      "alt": "picture 3",
+      "preview": "img/red_bag.jpg",
+      "imageModal": "img/red_leather_bag-2-1220.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Идеальный аксессуар для вашего образа",
+      "alt": "picture 4",
+      "preview": "img/thick_leather_belt-1-1220.jpg",
+      "imageModal": "img/mens_belt.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Идеальный портфель для повседневных дел",
+      "alt": "picture 5",
+      "preview": "img/brown_briefcase-2-1220.jpg",
+      "imageModal": "img/brown_briefcaseo.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Сумка для шоппинга",
+      "alt": "picture 6",
+      "preview": "img/shopper.jpg",
+      "imageModal": "img/leather_shopper_bag-2-1220.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 1",
+      "preview": "img/preview/1000001449-Photoroom.webp",
+      "imageModal": "img/1000001449-Photoroom.png"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 2",
+      "preview": "img/preview/IMG_20250227_143005307_MFNR-1-Photoroom.webp",
+      "imageModal": "img/IMG_20250227_143005307_MFNR-1-Photoroom.png"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 3",
+      "preview": "img/preview/IMG_20250303_174249540.webp",
+      "imageModal": "img/IMG_20250303_174249540.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 4",
+      "preview": "img/preview/IMG_20250304_181732644.webp",
+      "imageModal": "img/IMG_20250304_181732644.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "top",
+      "group": "default",
+      "image": "img/1000001369-Photoroom.png",
+      "title": "Изделия из кожи",
+      "slogan": "Для ценителей всего настоящего и натурального!"
+    },
+    {
+      "page": "workshop",
+      "type": "faq",
+      "group": "care",
+      "question": "Как ухаживать за кожей?",
+      "answer": "Не мочить! При намокании, не сушить возле отопительных приборов!"
+    },
+    {
+      "page": "workshop",
+      "type": "faq",
+      "group": "care",
+      "question": "Как хранить сумку?",
+      "answer": "Храните изделие в мешке..."
+    },
+    {
+      "page": "workshop",
+      "type": "faq",
+      "group": "care",
+      "question": "Какое масло использовать для кожи?",
+      "answer": "Вы можете использовать любое невысыхающее масло растительного происхождения. Например, очищенное оливковое или касторовое."
+    },
+    {
+      "page": "workshop",
+      "type": "faq",
+      "group": "process",
+      "question": "Как изготавливаются изделия?",
+      "answer": "С любовью!"
+    },
+    {
+      "page": "workshop",
+      "type": "faq",
+      "group": "process",
+      "question": "Как заказать изделие?",
+      "answer": "Нажмите кнопку заказать, следуйте инструкциям!"
+    },
+    {
+      "page": "workshop",
+      "type": "slider",
+      "group": "default",
+      "alt": "team photo 1",
+      "preview": "img/preview/team-1.webp",
+      "imageModal": "img/team-1.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "slider",
+      "group": "default",
+      "alt": "team photo 2",
+      "preview": "img/preview/team-2.webp",
+      "imageModal": "img/team-2.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "slider",
+      "group": "default",
+      "alt": "team photo 3",
+      "preview": "img/preview/team-3.webp",
+      "imageModal": "img/team-3.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "slider",
+      "group": "default",
+      "alt": "team photo 4",
+      "preview": "img/preview/team-4.webp",
+      "imageModal": "img/team-4.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "articles",
+      "group": "about",
+      "title": "О компании",
+      "alt": "наша мастерская",
+      "text": "Работаем с 2016 года. Всё началось с того что мы...\nНовый абзац -\nЕщё какой-нибудь абзац..."
+    },
+    {
+      "page": "workshop",
+      "type": "articles",
+      "group": "news",
+      "title": "Новости",
+      "alt": "банка с аппретурой",
+      "text": "Новая аппретура для кожи из Италии"
+    },
+    {
+      "page": "workshop",
+      "type": "articles",
+      "group": "other",
+      "image": "img/preview/team-1.webp",
+      "title": "Разное",
+      "alt": "шерфовальный станок",
+      "text": "Американский завод по производству кожи разработал..."
+    },
+    {
+      "page": "information",
+      "type": "top",
+      "group": "default",
+      "image": "img/1000001369-Photoroom.png",
+      "title": "Изделия из кожи",
+      "slogan": "Для ценителей всего настоящего и натурального!"
+    },
+    {
+      "page": "information",
+      "type": "articles",
+      "group": "info",
+      "image": "img/belt-size.png",
+      "title": "Что нужно знать при заказе ремня?",
+      "alt": "замер талии",
+      "text": "Вам необходимо замерить объём Вашей талии: \n -С помощью рулетки для портных, замерьте окружность Вашей талии в том месте, где Вы обычно носите ремень. \n -Также можно замерить ремень, который Вы уже носите: положите его на ровную поверхность и измерьте длину от внутренней стороны пряжки до Вашего основного отверстия (как показано на изображении).\n -Добавьте товар в корзину и в поле \"Обхват талии\" внесите это значение."
+    },
+    {
+      "page": "information",
+      "type": "articles",
+      "group": "info",
+      "image": "img/skin.webp",
+      "title": "Выбор кожи",
+      "icon": "icons/gpt-pay.png",
+      "alt": "естественный рисунок на поверхности кожи",
+      "text": "Кожа с финишным покрытием - кожа которая покрыта...\n -Пункт 1\n -Пункт 2\nВыбор вида кожи зависист от Ваших эстетических предпочтений и условий эксплуатации. Например, изделие из кожи хромового дубления не так подвержено действию воды и механическому износу как например, изделие из кожи растительного дубления.\nНекоторые предпочитают..."
+    },
+    {
+      "page": "information",
+      "type": "articles",
+      "group": "payment",
+      "title": "Оплата и доставка",
+      "icon": "icons/gpt-delivery.png",
+      "alt": "изделие в упаковке",
+      "text": "После оформления заказа мы свяжемся с Вами для уточнения способов оплаты, доставки и сроков изготовления:\n -сумки/портфели/кошельки - предоплата 25% от стоимости изделия.\n -доставка осуществляется услугами Новой Почты.\n -Стоимость изделия указанная на сайте не включает тарифы на доставку.\n -оплата: наложенный платеж/предоплата.\nВы можете вернуть изделие прямо в отделении Новой Почты при условии, если:\n -изделие не соответствует заказанному на фото\n -изделие повреждено или имеет дефекты (см. раздел \"Выбор кожи\").\nОбычно изделие отправляется заказчику на следующий день после изготовления. Срок изготовления зависит от вида/модели/загруженности:\n -сумка/портфель: 7-14 дней.\n -кошелёк/портмоне: 2-4 дней.\n -ремень: 1 день.\n\nОплаченное изделие обмену или возврату не подлежит!"
+    },
+    {
+      "page": "information",
+      "type": "articles",
+      "group": "privacy",
+      "title": "Политика конфиденциальности",
+      "text": "Сбор и обработка данных:\n -Мы используем только Ваш номер телефона, который вы указываете при оформлении заказа.\n -Номер телефона используется только для связи с Вами по вопросам Вашего заказа и не передаётся третьим лицам.\n -Вы можете в любой момент попросить нас удалить Ваш номер — мы удалим его из нашей базы.\n -Обработка персональных данных осуществляется в соответствии с Законом Украины «О защите персональных данных».\n -Нажимая «Оформить заказ», Вы даёте согласие на использование Вашего номера телефона для этих целей."
+    }
+  ]
+}
+

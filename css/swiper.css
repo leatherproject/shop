@@ -1,0 +1,159 @@
+/* https://swiperjs.com/demos - Slides per view */
+.swiper {
+  width: 100%;
+  height: auto; 
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.swiper-slide {  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; 
+  background: ''; 
+  color: #fff; 
+}
+
+.swiper-slide img {  
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+/**/
+
+/* custom */
+.container-swiper {
+  max-width: 1350px;     
+  margin: 0 auto;   
+  padding: 0;  
+}
+
+.slide--swiper {                   
+  padding-top: 30px; 
+  padding-bottom: 30px;
+  background: ''; /* #eeeeee; */
+}
+
+.slide--xSwiper {
+  /*padding-top: 30px; /*TODO - или 0 */
+  /*padding-bottom: 30px; /*TODO - или 0 */
+}
+  
+.slide__img:hover { 
+  cursor: pointer;
+}
+
+/*** layer, modal ***/
+.swiper-modal__image-box { 
+  display: none;		    
+  position: relative;
+  top: 0;
+  right: 0;		  
+  left: 0;
+  bottom: 0px; 	
+  max-width: calc(100% - 10px);      
+  margin: auto;       
+  z-index: 2;   
+  background-color: #fff;
+  opacity: 0;
+  animation: swiper-anim 0.3s forwards;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 	
+}
+
+@media screen and (orientation: landscape) {  
+  .swiper-modal__image-box {    
+    max-width: calc(78%); 
+    margin: auto;    
+  }
+}
+@media screen and (min-width: 955px) { 
+  .swiper-modal__image-box {   
+    max-width: 720px;               
+  }
+}
+
+.swiper-modal__image {    
+  display: block;
+  max-width: 100%; 
+  max-height: calc(100vh - 10px);  
+  margin: auto;
+  /*border: 1px solid rgba(0, 0, 0, 0.4);*/
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);   	
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);	 	 	 	
+}
+
+.swiper-modal__layer {
+  display: none;
+  align-items: center;
+  position: fixed;  
+  top: 0;
+  left: 0;   
+  right: 0;
+  bottom: 0;		    
+  background: rgba(0, 0, 0, 0.7);   
+  z-index: 200;	      
+  overflow-x: hidden;
+  cursor: pointer;  	
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   
+}
+  
+/*** close icon ***/
+.swiper-modal__close {
+  display: inline-block;
+  position: absolute;	
+  top: calc(-50px );
+  right: calc(0px);	
+  font-size: 37px;	
+  color: #ececec;
+  z-index: 3;
+  transition: 0.2s;        
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);     
+}
+
+@media screen and (orientation: landscape) {   
+  .swiper-modal__close { 
+    position: absolute;
+    top: calc(0px);
+    right: calc(-50px);
+    font-size: 37px; 
+  }
+}
+	  
+.swiper-modal__close:hover,
+.swiper-modal__close:focus {         
+  text-decoration: none;
+  cursor: pointer;
+  color: silver; 	  
+}
+
+@keyframes swiper-anim {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.layer-view {
+  display: flex;
+  cursor: pointer;
+  animation: swiper-layerView forwards;
+}
+@keyframes swiper-layerView {
+  0% {opacity: 0;}
+  100% {opacity: 1;}   
+}
+
+.layer-hidden {
+  display: flex;
+  cursor: pointer;
+  animation: swiper-layerHidden forwards;
+}
+@keyframes swiper-layerHidden {
+  0% {opacity: 1;}
+  100% {opacity: 0;}   
+}
+
