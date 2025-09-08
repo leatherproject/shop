@@ -8,7 +8,7 @@ const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
 // Используем API из объекта AppConfig
-//const API_URL = window.AppConfig.API_URL;
+const API_URL = window.AppConfig.API_URL;
 
 //
 let products = [];
@@ -17,7 +17,7 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch('https://drive.google.com/uc?export=download&id=1LiMXZk74mYtxlOXeKINt0OxwmeHvmM2d');        
+    const response = await fetch(API_URL);        
 
     if (!response.ok) throw new Error('500 Internal Server Error');
         
