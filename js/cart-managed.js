@@ -466,15 +466,13 @@ form.addEventListener('submit', async (event) => {
   showDialog("Отправка заказа...");
 
   try {
-    const formData = new FormData();
-    formData.append('phone', phone);
-    formData.append('cart', JSON.stringify(cart));
-    formData.append('secret', 'F0ewmuO0jmnnhSFfreoHG'); //TODO - тестируется без строки! при необходимости - вернуть!
+    //const formData = new FormData();
+    //formData.append('phone', phone);
+    //formData.append('cart', JSON.stringify(cart));
+    //formData.append('secret', 'F0ewmuO0jmnnhSFfreoHG'); //TODO - тестируется без строки! при необходимости - вернуть!
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbw6GWsl9XCPRhcOmQN7ymx3u-CfhjzfWkV2ThEGH-A74ESYBvbWWjUsjGwYlqQnaUrj/exec', {
-      method: 'POST',
-      body: formData
-    });
+    const response = await fetch(`https://script.google.com/macros/s/AKfycbw6GWsl9XCPRhcOmQN7ymx3u-CfhjzfWkV2ThEGH-A74ESYBvbWWjUsjGwYlqQnaUrj/exec?phone=${encodeURIComponent(phone)}&cart=${encodeURIComponent(JSON.stringify(cart))}&secret=F0ewmuO0jmnnhSFfreoHG`);
+
 
     const text = await response.text();
 
