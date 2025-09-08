@@ -471,7 +471,7 @@ form.addEventListener('submit', async (event) => {
     //formData.append('cart', JSON.stringify(cart));
     //formData.append('secret', 'F0ewmuO0jmnnhSFfreoHG'); //TODO - тестируется без строки! при необходимости - вернуть!
 
-    const response = await fetch(`https://script.google.com/macros/s/AKfycbw6GWsl9XCPRhcOmQN7ymx3u-CfhjzfWkV2ThEGH-A74ESYBvbWWjUsjGwYlqQnaUrj/exec?phone=${encodeURIComponent(phone)}&cart=${encodeURIComponent(JSON.stringify(cart))}&secret=F0ewmuO0jmnnhSFfreoHG`);
+    const response = await fetch(`https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbygVz6vvXjlIsA2C_ZworjnMrintVyRbge96MCygwGtF19vCVh5RXj_jmEuLvcCsr4X/exec?phone=${encodeURIComponent(phone)}&cart=${encodeURIComponent(JSON.stringify(cart))}&secret=F0ewmuO0jmnnhSFfreoHG`);
 
 
     const text = await response.text();
