@@ -464,15 +464,21 @@ form.addEventListener('submit', (event) => {
 
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  showDialog("Отправка заказа...");
+  //showDialog("Отправка заказа...");
 
   // --- Нативная отправка формы ---
   form.phone.value = phone;
   form.cart.value = JSON.stringify(cart);
   form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
-  form.action = "https://script.google.com/macros/s/AKfycbwxBJFpRLWliC41gK23B7vkqZbhmcpiZLLm6GYjOUGONr0ayFHY61R_Tm1PNfaMrcpa/exec"; // твой GAS URL
+  form.action = "https://script.google.com/macros/s/AKfycbzs8ERmfaBYSVyNm-xciqckTatqwgMHeNRxyppB22TG6X9rHKuZTfr4O9axg_8CTOWa/exec"; // твой GAS URL
   form.method = "POST";
   form.submit();
+
+  // Очистка и сообщение
+  localStorage.removeItem('cart');
+  //alert("Спасибо! Заказ отправлен. Мы с вами свяжемся.");
+  document.getElementById('orderForm').style.display = 'none';
+  document.getElementById('phoneInput').value = '';
 
 });
 //
