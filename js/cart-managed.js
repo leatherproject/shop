@@ -478,10 +478,9 @@ form.addEventListener('submit', (event) => {
   // Очистка и сообщение
   localStorage.removeItem('cart');
   //alert("Спасибо! Заказ отправлен. Мы с вами свяжемся.");
-  document.getElementById('orderForm').style.display = 'none';
+  //document.getElementById('orderForm').style.display = 'none';
   //document.getElementById('phoneInput').value = '';
-  //updateInterface();
-  showDialog('Заказ отправлен!');
+  updateInterface();
 
 });
 //
