@@ -470,7 +470,7 @@ form.addEventListener('submit', (event) => {
   form.phone.value = phone;
   form.cart.value = JSON.stringify(cart);
   form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
-  form.action = "https://script.google.com/macros/s/AKfycbzs8ERmfaBYSVyNm-xciqckTatqwgMHeNRxyppB22TG6X9rHKuZTfr4O9axg_8CTOWa/exec"; // твой GAS URL
+  form.action = "https://script.google.com/macros/s/AKfycbwqmt9Q9Ju0vUAABMzEjNO0nnmjanZltcVxqmyDTFIdakivlgR2xn5JBITIQRTP5IwIAA/exec"; // твой GAS URL
   form.method = "POST";
   form.submit();
 
