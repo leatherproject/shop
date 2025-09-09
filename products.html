@@ -97,7 +97,7 @@
 
         <div id="formOverlay" class="form-overlay">
           <iframe name="hidden_iframe" style="display:none;"></iframe>
-          <form id="orderForm" class="order-form" novalidate>
+          <form id="orderForm" class="order-form" novalidate target="hidden_iframe">
             <label for="phoneInput">Введите номер телефона:</label><br>
             <input type="tel" inputmode="tel" id="phoneInput" class="order-form__input" placeholder="+380..." autocomplete="tel">
             <span class="error-message" id="phoneError" aria-live="polite"></span>
