@@ -480,7 +480,7 @@ form.addEventListener('submit', (event) => {
   //alert("Спасибо! Заказ отправлен. Мы с вами свяжемся.");
   //document.getElementById('orderForm').style.display = 'none';
   //document.getElementById('phoneInput').value = '';
-  updateInterface();
+  //updateInterface();
 
 });
 //
