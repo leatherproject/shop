@@ -480,13 +480,14 @@ form.addEventListener('submit', (event) => {
 
   document.getElementById('phoneInput').value = '';
   enablePageScrolling();
-  document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
-  document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
-  //updateInterface();
+  //document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
+  //document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
+  closeForm(); 
+  renderCartItem(product);
 
 });
 //
-
+/*
   function showDialog(message) {
     disablePageScrolling();
     document.getElementById('modalMessage').textContent = message;
@@ -514,6 +515,7 @@ form.addEventListener('submit', (event) => {
 
 document.getElementById('closeModalBtn').addEventListener('click', closeDialog);
 document.getElementById('okBtn').addEventListener('click', updateInterface);
+*/
 
 //
 window.addEventListener('pageshow', (event) => {
