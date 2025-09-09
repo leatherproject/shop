@@ -472,14 +472,15 @@ form.addEventListener('submit', (event) => {
   form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
   form.action = "https://script.google.com/macros/s/AKfycbwqmt9Q9Ju0vUAABMzEjNO0nnmjanZltcVxqmyDTFIdakivlgR2xn5JBITIQRTP5IwIAA/exec"; // твой GAS URL
   form.method = "POST";
-  console.log(form.secret.value)
+  console.log(form.secret.value);
   form.submit();
 
   // Очистка и сообщение
   localStorage.removeItem('cart');
   //alert("Спасибо! Заказ отправлен. Мы с вами свяжемся.");
   document.getElementById('orderForm').style.display = 'none';
-  document.getElementById('phoneInput').value = '';
+  //document.getElementById('phoneInput').value = '';
+  updateInterface();
 
 });
 //
@@ -502,7 +503,7 @@ form.addEventListener('submit', (event) => {
 
   function updateInterface() {
     document.getElementById('phoneInput').value = '';
-    enablePageScrolling();
+    //enablePageScrolling();
     document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
     document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
     window.location.reload();
