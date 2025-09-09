@@ -483,7 +483,7 @@ form.addEventListener('submit', (event) => {
   //document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
   //document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
   closeForm(); 
-  renderCartItem(product);
+  renderCartItem();
 
 });
 //
