@@ -478,11 +478,11 @@ form.addEventListener('submit', (event) => {
   // Очистка и сообщение
   localStorage.removeItem('cart');
 
-  document.getElementById('phoneInput').value = '';
-  enablePageScrolling();
-  document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
-  document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
-  //updateInterface();
+  //document.getElementById('phoneInput').value = '';
+  //enablePageScrolling();
+  //document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
+  //document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
+  updateInterface();
 
 });
 //
