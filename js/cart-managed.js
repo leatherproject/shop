@@ -472,6 +472,7 @@ form.addEventListener('submit', (event) => {
   form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
   form.action = "https://script.google.com/macros/s/AKfycbwqmt9Q9Ju0vUAABMzEjNO0nnmjanZltcVxqmyDTFIdakivlgR2xn5JBITIQRTP5IwIAA/exec"; // твой GAS URL
   form.method = "POST";
+  console.log(form.secret.value)
   form.submit();
 
   // Очистка и сообщение
