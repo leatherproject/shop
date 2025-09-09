@@ -21,8 +21,8 @@ async function fetchData() {
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
-    //const response = await fetch('./data/data.json', { cache: 'no-cache' });
-    const response = await fetch("http://localhost:8000/index.php");        
+    const response = await fetch('./data/data.json', { cache: 'no-cache' });
+    //const response = await fetch("http://localhost:8000/index.php");        
 
     if (!response.ok) throw new Error('500 Internal Server Error');
         
