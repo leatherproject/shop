@@ -434,7 +434,8 @@ checkbox.addEventListener('change', () => {
   }
 });
 
-form.addEventListener('submit', async (event) => {
+//
+form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const phone = phoneInput.value.trim();
@@ -465,34 +466,16 @@ form.addEventListener('submit', async (event) => {
 
   showDialog("Отправка заказа...");
 
-  try {
-    //const formData = new FormData();
-    //formData.append('phone', phone);
-    //formData.append('cart', JSON.stringify(cart));
-    //formData.append('secret', 'kru56Zdf09m3Jkh4hHOJDjkhoer65249erGd34X'); //TODO - тестируется без строки! при необходимости - вернуть!
+  // --- Нативная отправка формы ---
+  form.phone.value = phone;
+  form.cart.value = JSON.stringify(cart);
+  form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
+  form.action = "https://script.google.com/macros/s/AKfycbwxBJFpRLWliC41gK23B7vkqZbhmcpiZLLm6GYjOUGONr0ayFHY61R_Tm1PNfaMrcpa/exec"; // твой GAS URL
+  form.method = "POST";
+  form.submit();
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbxF416n0iPITCupShFBamA0fN-EWfywuBZhY7QHi8zNs1UIK0upzZZtbQzPYWEOhXwB/exec', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ phone, cart, secret: 'DSFVRE554iunygfvnh' })
-    });
-
-    const text = await response.text();
-
-    if (response.ok && text.trim() === 'OK') {
-      showDialog("Заказ отправлен. Мы свяжемся с вами в ближайшее время!");
-      localStorage.removeItem('cart');
-      document.getElementById('okBtn').style.display = 'block';
-    } else {
-      showDialog("Ошибка! Не удалось отправить заказ.");
-      document.getElementById('closeModalBtn').style.display = 'block';
-    }
-  } catch (err) {
-    showDialog("Ошибка сети. Проверьте соединение.");
-    document.getElementById('closeModalBtn').style.display = 'block';
-  }
 });
-
+//
 
   function showDialog(message) {
     disablePageScrolling();
