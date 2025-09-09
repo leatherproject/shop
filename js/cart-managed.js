@@ -480,6 +480,10 @@ form.addEventListener('submit', (event) => {
   //alert("Спасибо! Заказ отправлен. Мы с вами свяжемся.");
   //document.getElementById('orderForm').style.display = 'none';
   //document.getElementById('phoneInput').value = '';
+  document.getElementById('phoneInput').value = '';
+  enablePageScrolling();
+  document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
+  document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
   //updateInterface();
 
 });
