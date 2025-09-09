@@ -96,7 +96,7 @@
         </div>
 
         <div id="formOverlay" class="form-overlay">
-          <iframe name="hidden_iframe" style="display:none;"></iframe>
+          <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
           <form id="orderForm" class="order-form" novalidate target="hidden_iframe">
             <label for="phoneInput">Введите номер телефона:</label><br>
             <input type="tel" inputmode="tel" id="phoneInput" class="order-form__input" placeholder="+380..." autocomplete="tel">
@@ -125,7 +125,7 @@
         <div class="cart js-cart"></div>
       </div>
     </div>
-    
+
     <div class="cart__dialog-overlay">
       <div id="cartDialog" class="cart__dialog">
         <p id="modalMessage"></p>
@@ -133,11 +133,8 @@
         <button id="okBtn" class="btn-ok">Ok</button>
       </div>
     </div>
- 
-
-
-
-  
+    
+    
 <section class="s-products">
   <div class="container">
     <h2 class="s-products__title">Кошельки / Ремни / Сумки</h2>

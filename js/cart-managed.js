@@ -434,7 +434,7 @@ checkbox.addEventListener('change', () => {
   }
 });
 
-//
+// form
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -464,7 +464,11 @@ form.addEventListener('submit', (event) => {
 
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-  //showDialog("Отправка заказа...");
+  // Показать индикатор отправки
+  document.getElementById('modalMessage').textContent = 'Отправка заказа...';
+  document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-hide');
+  document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-view');
+  disablePageScrolling();
 
   // --- Нативная отправка формы ---
   form.phone.value = phone;
@@ -472,50 +476,69 @@ form.addEventListener('submit', (event) => {
   form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
   form.action = "https://script.google.com/macros/s/AKfycbwqmt9Q9Ju0vUAABMzEjNO0nnmjanZltcVxqmyDTFIdakivlgR2xn5JBITIQRTP5IwIAA/exec"; // твой GAS URL
   form.method = "POST";
+  form.target = "hidden_iframe"; // вот ключевое для вывода ответа в iframe
   console.log(form.secret.value);
   form.submit();
 
-  // Очистка и сообщение
+/*
+  // Очистка корзины
+  // для варианта с и без iframe -
   localStorage.removeItem('cart');
+  cart.length = 0;
+  cartContainer.innerHTML = '';
+  countBadge.classList.remove('count-badge--visible');
+  calcTotal();
 
-  document.getElementById('phoneInput').value = '';
+  // восстановить все кнопки "добавить"
+  document.querySelectorAll('.js-add-cart').forEach(btn => {
+    btn.disabled = false;
+    btn.textContent = 'добавить';
+    btn.classList.remove('ordered');
+  });
+
+  // очистка формы и закрытие
+  phoneInput.value = '';
   enablePageScrolling();
-  //document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
-  //document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
   closeForm(); 
-  renderCartItem();
+  // для варианта с iframe
+*/
+
+/*
+  // Очистка корзины
+  // для варианта без iframe -
+  localStorage.removeItem('cart');
+  closeForm(); 
+  // для варианта без iframe
+*/
 
 });
-//
-/*
-  function showDialog(message) {
-    disablePageScrolling();
-    document.getElementById('modalMessage').textContent = message;
-    document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-hide');
-    document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-view');
-    closeForm(); 
-  }
+// form
 
-  function closeDialog() {
-    enablePageScrolling();
-    document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
-    document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
-    document.getElementById('closeModalBtn').style.display = 'none';
-    closeForm(); 
-  }
+// Ждём ответа от GAS в iframe
+document.getElementById('hidden_iframe').addEventListener('load', () => {
+  console.log('Ответ от GAS получен — очищаем интерфейс');
 
-  function updateInterface() {
-    document.getElementById('phoneInput').value = '';
-    //enablePageScrolling();
-    document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
-    document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
-    window.location.reload();
-  }
+  // Очистка корзины и формы
+  localStorage.removeItem('cart');
+  cart.length = 0;
+  cartContainer.innerHTML = '';
+  countBadge.classList.remove('count-badge--visible');
+  calcTotal();
 
+  // восстановить все кнопки "добавить"
+  document.querySelectorAll('.js-add-cart').forEach(btn => {
+    btn.disabled = false;
+    btn.textContent = 'добавить';
+    btn.classList.remove('ordered');
+  });
 
-document.getElementById('closeModalBtn').addEventListener('click', closeDialog);
-document.getElementById('okBtn').addEventListener('click', updateInterface);
-*/
+  // очистка формы и закрытие
+  phoneInput.value = '';
+  enablePageScrolling();
+  document.querySelector('.cart__dialog-overlay').classList.remove('c-dialog-view');
+  document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
+  closeForm();
+});
 
 //
 window.addEventListener('pageshow', (event) => {
