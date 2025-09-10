@@ -1,5 +1,8 @@
 <?php
-$apiUrl = 'https://drive.google.com/uc?export=download&id=1LiMXZk74mYtxlOXeKINt0OxwmeHvmM2d';
+//$apiUrl = 'https://drive.google.com/uc?export=download&id=1LiMXZk74mYtxlOXeKINt0OxwmeHvmM2d';
+$apiUrl = 'https://leatherproject.github.io/shop/data/data.json';
+//$apiUrl = 'https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json';
+//$apiUrl = './data/data.json';
 
 // Получаем данные с API Google Apps Script
 $jsonData = @file_get_contents($apiUrl);

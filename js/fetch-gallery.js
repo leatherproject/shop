@@ -12,18 +12,18 @@ const swiperWrapper = document.querySelector('.swiper-wrapper');
 const modalLayer = document.querySelector('.swiper-modal__layer');
 
 // Используем API из объекта AppConfig
-//const API_URL = window.AppConfig.API_URL;
+const API_URL = window.AppConfig.API_URL;
 
 async function fetchData() {
   try {
     galleryContainer.innerHTML = '<p class="loading">Loading...</p>';
     swiperWrapper.innerHTML = '<p class="loading">Загрузка слайдера...</p>';
       
-    //const response = await fetch(API_URL);        
+    const response = await fetch(API_URL);        
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
-    const response = await fetch('./data/data.json', { cache: 'no-cache' });
+    //const response = await fetch('./data/data.json', { cache: 'no-cache' });
 
     if (!response.ok) throw new Error('500 Internal Server Error');
         

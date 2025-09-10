@@ -473,10 +473,10 @@ form.addEventListener('submit', (event) => {
   // --- Нативная отправка формы ---
   form.phone.value = phone;
   form.cart.value = JSON.stringify(cart);
-  form.secret.value = "Ffvmerug87544g8n4REgv4tgmu"; // твой секрет для GAS
-  form.action = "https://script.google.com/macros/s/AKfycbwqmt9Q9Ju0vUAABMzEjNO0nnmjanZltcVxqmyDTFIdakivlgR2xn5JBITIQRTP5IwIAA/exec"; // твой GAS URL
+  form.secret.value = "Skefvb6HkjfhOjso0Oen23n"; // твой секрет для GAS
+  form.action = "https://script.google.com/macros/s/AKfycbzQ8h3E79k3O6QWMo8yX9VRkpigENO_HSOrQdG9orq2nbXkr6Ah__TyW5PhhiUHvzfy-w/exec"; // твой GAS URL
   form.method = "POST";
-  form.target = "hidden_iframe"; // вот ключевое для вывода ответа в iframe
+  form.target = "hidden_iframe"; // ключевое для вывода ответа в iframe
   console.log(form.secret.value);
   form.submit();
 
