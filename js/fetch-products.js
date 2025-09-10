@@ -11,7 +11,7 @@ const AppConfig = {
   //API_URL: "http://localhost:8000/index.php", // Локальный сервер
   //API_URL: "https://leatherproject.github.io/shop/data/data.json",
   //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
-  API_URL: "./data/data.json', { cache: 'no-cache' }"
+  API_URL: './data/data.json'
 };
 
 //
@@ -21,7 +21,7 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch(AppConfig.API_URL);
+    const response = await fetch(AppConfig.API_URL, { cache: 'no-cache' });
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
