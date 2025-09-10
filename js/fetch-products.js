@@ -10,16 +10,36 @@ const offerInfo = document.querySelector('[data-top-offer]');
 // Используем API из объекта AppConfig
 //const API_URL = window.AppConfig.API_URL;
 
+// Пример флага, который устанавливается, когда конфигурация будет загружена
+let configLoaded = false;
+let configResolve;
+
+// Используем API из объекта AppConfig
+//const API_URL = window.AppConfig.API_URL;
+
 const loadAppConfig = async () => {
-  if (window.AppConfig && window.AppConfig.API_URL) {
+  if (configLoaded) {
     return window.AppConfig.API_URL;  // Если конфигурация уже загружена, сразу возвращаем API_URL
   }
-  return new Promise((resolve) => {    
-    if (window.AppConfig && window.AppConfig.API_URL) {
-      resolve(window.AppConfig.API_URL);  // Резолвим промис, когда конфигурация готова
-    }    
+
+  return new Promise((resolve, reject) => {
+    // Создаём функцию, которая будет вызвана, когда конфигурация загрузится
+    configResolve = resolve;
+
+    // Вешаем обработчик на событие, когда конфигурация будет готова
+    const checkConfig = () => {
+      if (window.AppConfig && window.AppConfig.API_URL) {
+        configLoaded = true;
+        resolve(window.AppConfig.API_URL);  // Резолвим промис, когда конфигурация готова
+        window.removeEventListener('AppConfigLoaded', checkConfig); // Убираем обработчик
+      }
+    };
+
+    // Добавляем событие на загрузку конфигурации
+    window.addEventListener('AppConfigLoaded', checkConfig);
   });
 };
+
 
 //
 let products = [];
