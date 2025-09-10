@@ -17,7 +17,7 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch(API_URL);
+    //const response = await fetch(API_URL);
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
