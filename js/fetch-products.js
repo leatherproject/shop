@@ -8,7 +8,7 @@ const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
 // Используем API из объекта AppConfig
-const API_URL = window.AppConfig.API_URL;
+
 
 //
 let products = [];
@@ -16,6 +16,8 @@ let products = [];
 async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
+
+    const API_URL = window.AppConfig.API_URL;
       
     const response = await fetch(API_URL);
 
