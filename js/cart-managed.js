@@ -476,11 +476,11 @@ form.addEventListener('submit', (event) => {
   form.secret.value = "Skefvb6HkjfhOjso0Oen23n"; // твой секрет для GAS
   form.action = "https://script.google.com/macros/s/AKfycbzQ8h3E79k3O6QWMo8yX9VRkpigENO_HSOrQdG9orq2nbXkr6Ah__TyW5PhhiUHvzfy-w/exec"; // твой GAS URL
   form.method = "POST";
-  form.target = "hidden_iframe"; // ключевое для вывода ответа в iframe
+  //form.target = "hidden_iframe"; // ключевое для вывода ответа в iframe
   console.log(form.secret.value);
   form.submit();
 
-/*
+
   // Очистка корзины
   // для варианта с и без iframe -
   localStorage.removeItem('cart');
@@ -501,7 +501,7 @@ form.addEventListener('submit', (event) => {
   enablePageScrolling();
   closeForm(); 
   // для варианта с iframe
-*/
+
 
 /*
   // Очистка корзины
@@ -514,6 +514,7 @@ form.addEventListener('submit', (event) => {
 });
 // form
 
+/*
 // Ждём ответа от GAS в iframe
 document.getElementById('hidden_iframe').addEventListener('load', () => {
   console.log('Ответ от GAS получен — очищаем интерфейс');
@@ -539,6 +540,7 @@ document.getElementById('hidden_iframe').addEventListener('load', () => {
   document.querySelector('.cart__dialog-overlay').classList.add('c-dialog-hide');
   closeForm();
 });
+*/
 
 //
 window.addEventListener('pageshow', (event) => {
