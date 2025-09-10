@@ -8,14 +8,9 @@ const image = document.querySelector('[data-top-image]');
 const title = document.querySelector('[data-top-title]');
 const slogan = document.querySelector('[data-top-slogan]');
 
-const AppConfig = {
-  //API_URL: "http://localhost:8000/index.php", // Локальный сервер
-  //API_URL: "https://leatherproject.github.io/shop/data/data.json",
-  //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
-  API_URL: './data/data.json'
-};
+const API_URL = window.AppConfig.API_URL;
 
-async function fetchData() {
+async function fetchData(url) {
     try {
         // Показываем прелоадер
         infoContainer.innerHTML = '<p class="loading">Loading...</p>';
@@ -23,11 +18,8 @@ async function fetchData() {
         privacyContainer.innerHTML = '<p class="loading">Loading...</p>';
 
         // Запрос к серверу
-        const response = await fetch(AppConfig.API_URL, { cache: 'no-cache' });  
-
-        //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
-        //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
-        //const response = await fetch('./data/data.json', { cache: 'no-cache' });
+        const response = await fetch(url, { cache: 'no-cache' });
+        //const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error('500 Internal Server Error');
@@ -96,7 +88,7 @@ async function fetchData() {
         privacyContainer.innerHTML = `<p class="error-500">${error.message}</p>`;                    
     }
 }
-fetchData();
+fetchData(API_URL);
 
 // генерации статей
 function displayArticles(container, articles) {
