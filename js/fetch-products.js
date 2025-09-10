@@ -7,25 +7,21 @@ const title = document.querySelector('[data-top-title]');
 const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
-const AppConfig = {
-  //API_URL: "http://localhost:8000/index.php", // Локальный сервер
-  //API_URL: "https://leatherproject.github.io/shop/data/data.json",
-  //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
-  API_URL: './data/data.json'
-};
+// Используем API из объекта AppConfig
+const API_URL = window.AppConfig.API_URL;
 
 //
 let products = [];
 
-async function fetchData() {
+async function fetchData(url) {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
-    const response = await fetch(AppConfig.API_URL, { cache: 'no-cache' });
+    //const response = await fetch(API_URL);
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
-    //const response = await fetch('./data/data.json', { cache: 'no-cache' });
+    const response = await fetch(url, { cache: 'no-cache' });
     //const response = await fetch("http://localhost:8000/index.php");        
 
     if (!response.ok) throw new Error('500 Internal Server Error');
@@ -64,7 +60,7 @@ async function fetchData() {
     productsContainer.innerHTML = `<p class="error-500">${error.message}</p>`;    
   }
 }
-fetchData();
+fetchData(API_URL);
 //
 
 // Карточки товаров
