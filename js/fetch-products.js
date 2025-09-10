@@ -17,6 +17,12 @@ async function fetchData() {
   try {
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
 
+
+if (!window.AppConfig) {
+    console.error('AppConfig ещё не загружен!');
+    return;
+  }
+
     const API_URL = window.AppConfig.API_URL;
       
     const response = await fetch(API_URL);
