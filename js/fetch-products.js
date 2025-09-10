@@ -8,13 +8,28 @@ const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
 // Используем API из объекта AppConfig
-const API_URL = window.AppConfig.API_URL;
+//const API_URL = window.AppConfig.API_URL;
+
+const loadAppConfig = async () => {
+  if (window.AppConfig && window.AppConfig.API_URL) {
+    return window.AppConfig.API_URL;  // Если конфигурация уже загружена, сразу возвращаем API_URL
+  }
+  return new Promise((resolve) => {    
+    if (window.AppConfig && window.AppConfig.API_URL) {
+      clearInterval(interval);  // Очищаем интервал
+      resolve(window.AppConfig.API_URL);  // Резолвим промис, когда конфигурация готова
+    }    
+  });
+};
 
 //
 let products = [];
 
 async function fetchData() {
   try {
+    // Дожидаемся, пока конфигурация загрузится
+    const API_URL = await loadAppConfig();
+
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
     const response = await fetch(API_URL);
