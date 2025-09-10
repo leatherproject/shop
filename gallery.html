@@ -98,7 +98,8 @@
         </div>
 
         <div id="formOverlay" class="form-overlay">
-          <form id="orderForm" class="order-form" novalidate>
+          <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
+          <form id="orderForm" class="order-form" novalidate target="hidden_iframe">
             <label for="phoneInput">Введите номер телефона:</label><br>
             <input type="tel" inputmode="tel" id="phoneInput" class="order-form__input" placeholder="+380..." autocomplete="tel">
             <span class="error-message" id="phoneError" aria-live="polite"></span>
@@ -197,7 +198,6 @@
 
 </div>
 
-  <script src="js/config.js"></script> 
   <script src="js/disable-scroll.js"></script>
   <script src="js/icons.js"></script>
   <script src="js/menu.js"></script>
