@@ -11,15 +11,19 @@ const offerInfo = document.querySelector('[data-top-offer]');
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const modalLayer = document.querySelector('.swiper-modal__layer');
 
-// Используем API из объекта AppConfig
-const API_URL = window.AppConfig.API_URL;
+const AppConfig = {
+  //API_URL: "http://localhost:8000/index.php", // Локальный сервер
+  //API_URL: "https://leatherproject.github.io/shop/data/data.json",
+  //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
+  API_URL: "./data/data.json', { cache: 'no-cache' }"
+};
 
 async function fetchData() {
   try {
     galleryContainer.innerHTML = '<p class="loading">Loading...</p>';
     swiperWrapper.innerHTML = '<p class="loading">Загрузка слайдера...</p>';
       
-    const response = await fetch(API_URL);        
+    const response = await fetch(AppConfig.API_URL);        
 
     //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
     //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');

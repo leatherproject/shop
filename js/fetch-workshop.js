@@ -13,7 +13,12 @@ const slogan = document.querySelector('[data-top-slogan]');
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const modalLayer = document.querySelector('.swiper-modal__layer');
 
-const API_URL = window.AppConfig.API_URL;
+const AppConfig = {
+  //API_URL: "http://localhost:8000/index.php", // Локальный сервер
+  //API_URL: "https://leatherproject.github.io/shop/data/data.json",
+  //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
+  API_URL: "./data/data.json', { cache: 'no-cache' }"
+};
 
 async function fetchData() {
     try {
@@ -24,7 +29,7 @@ async function fetchData() {
         faqContainerProcess.innerHTML = '<p class="loading">Process...</p>';
         
         // Запрос к серверу
-        const response = await fetch(API_URL);  
+        const response = await fetch(AppConfig.API_URL);  
 
         //const response = await fetch('https://leatherproject.github.io/shop/data/data.json');
         //const response = await fetch('https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json');
