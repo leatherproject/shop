@@ -8,47 +8,21 @@ const slogan = document.querySelector('[data-top-slogan]');
 const offerInfo = document.querySelector('[data-top-offer]');
 
 // Используем API из объекта AppConfig
-//const API_URL = window.AppConfig.API_URL;
 
-// Пример флага, который устанавливается, когда конфигурация будет загружена
-let configLoaded = false;
-let configResolve;
-
-// Используем API из объекта AppConfig
-//const API_URL = window.AppConfig.API_URL;
-
-const loadAppConfig = async () => {
-  if (configLoaded) {
-    return window.AppConfig.API_URL;  // Если конфигурация уже загружена, сразу возвращаем API_URL
-  }
-
-  return new Promise((resolve, reject) => {
-    // Создаём функцию, которая будет вызвана, когда конфигурация загрузится
-    configResolve = resolve;
-
-    // Вешаем обработчик на событие, когда конфигурация будет готова
-    const checkConfig = () => {
-      if (window.AppConfig && window.AppConfig.API_URL) {
-        configLoaded = true;
-        resolve(window.AppConfig.API_URL);  // Резолвим промис, когда конфигурация готова
-        window.removeEventListener('AppConfigLoaded', checkConfig); // Убираем обработчик
-      }
-    };
-
-    // Добавляем событие на загрузку конфигурации
-    window.addEventListener('AppConfigLoaded', checkConfig);
-  });
+window.AppConfig = {
+  //API_URL: "http://localhost:8000/index.php", // Локальный сервер
+  //API_URL: "https://leatherproject.github.io/shop/data/data.json",
+  //API_URL: "https://raw.githubusercontent.com/leatherproject/shop/main/data/data.json",
+  API_URL: "./data/data.json', { cache: 'no-cache' }"
 };
 
+const API_URL = window.AppConfig.API_URL;
 
 //
 let products = [];
 
 async function fetchData() {
   try {
-    // Дожидаемся, пока конфигурация загрузится
-    const API_URL = await loadAppConfig();
-
     productsContainer.innerHTML = '<p class="loading">Loading...</p>';
       
     const response = await fetch(API_URL);
@@ -94,11 +68,7 @@ async function fetchData() {
     productsContainer.innerHTML = `<p class="error-500">${error.message}</p>`;    
   }
 }
-//fetchData();
-
-// Запуск конфигурации и данных только после загрузки конфигурации
-window.addEventListener('AppConfigLoaded', fetchData);
-window.dispatchEvent(new Event('AppConfigLoaded')); // Запуск события, которое триггерит загрузку данных
+fetchData();
 //
 
 // Карточки товаров
