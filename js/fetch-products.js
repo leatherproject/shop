@@ -94,8 +94,10 @@ async function fetchData() {
     productsContainer.innerHTML = `<p class="error-500">${error.message}</p>`;    
   }
 }
-fetchData();
+//fetchData();
 
+// Запуск конфигурации и данных только после загрузки конфигурации
+window.addEventListener('AppConfigLoaded', fetchData);
 window.dispatchEvent(new Event('AppConfigLoaded')); // Запуск события, которое триггерит загрузку данных
 //
 
