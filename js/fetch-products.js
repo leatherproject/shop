@@ -16,7 +16,6 @@ const loadAppConfig = async () => {
   }
   return new Promise((resolve) => {    
     if (window.AppConfig && window.AppConfig.API_URL) {
-      clearInterval(interval);  // Очищаем интервал
       resolve(window.AppConfig.API_URL);  // Резолвим промис, когда конфигурация готова
     }    
   });
