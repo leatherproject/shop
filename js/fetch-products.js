@@ -95,6 +95,8 @@ async function fetchData() {
   }
 }
 fetchData();
+
+window.dispatchEvent(new Event('AppConfigLoaded')); // Запуск события, которое триггерит загрузку данных
 //
 
 // Карточки товаров
