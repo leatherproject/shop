@@ -220,6 +220,12 @@
     },
     {
       "page": "gallery",
+      "type": "description",
+      "group": "intro",
+      "text": "Творчество, подходы...\nЭксперименты с разными видами кож, ниток и т.д."
+    },
+    {
+      "page": "gallery",
       "type": "pictures",
       "group": "default",
       "caption": "Изготовлен вручную из натуральной кожи",
@@ -303,6 +309,12 @@
       "alt": "slide 4",
       "preview": "img/preview/IMG_20250304_181732644.webp",
       "imageModal": "img/IMG_20250304_181732644.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "description",
+      "group": "details",
+      "text": "Из раннего... Нюансы работы.\nЛистайте карусель"
     },
     {
       "page": "workshop",
@@ -450,5 +462,4 @@
     }
   ]
 }
-
 
