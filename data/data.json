@@ -2,16 +2,6 @@
   "data": [
     {
       "page": "ourProducts",
-      "type": "top",
-      "group": "default",
-      "image": "img/IMG_20250304_181732644.jpg",
-      "title": "Изделия из кожи",
-      "slogan": "Ручной пошив!",
-      "offer": "Как создаются изделия из кожи?",
-      "link": " Ознакомьтесь с нашей мастерской"
-    },
-    {
-      "page": "ourProducts",
       "type": "products",
       "group": "default",
       "model": "WA24TR",
@@ -137,7 +127,6 @@
       ],
       "size": "197 Х 110 мм",
       "description": "Вместимость: 8 карт, 2 паспорта/куп. номиналом 500 евро, отдел на молнии",
-      "price": 1800,
       "limit": 1,
       "category": "wallet",
       "color1": "тёмно-каштановый",
@@ -207,16 +196,6 @@
       "color1": "серо-оливковый",
       "color2": "бежевый",
       "color3": "светло-коричневый"
-    },
-    {
-      "page": "gallery",
-      "type": "top",
-      "group": "default",
-      "image": "img/IMG_20250307_090857494.jpg",
-      "title": "Изделия из кожи",
-      "slogan": "Ручной пошив!",
-      "offer": "Как создаются изделия из кожи?",
-      "link": " Ознакомьтесь с нашей мастерской"
     },
     {
       "page": "gallery",
@@ -318,14 +297,6 @@
     },
     {
       "page": "workshop",
-      "type": "top",
-      "group": "default",
-      "image": "img/1000001369-Photoroom.png",
-      "title": "Изделия из кожи",
-      "slogan": "Ручной пошив!"
-    },
-    {
-      "page": "workshop",
       "type": "faq",
       "group": "care",
       "question": "Как ухаживать за кожей?",
@@ -404,8 +375,7 @@
       "type": "articles",
       "group": "news",
       "title": "Новости",
-      "alt": "банка с аппретурой",
-      "text": "Новая аппретура для кожи из Италии\n -пунктик\nАбзац последний"
+      "alt": "банка с аппретурой"
     },
     {
       "page": "workshop",
@@ -415,16 +385,6 @@
       "title": "Разное",
       "alt": "шерфовальный станок",
       "text": " -пункт 1\n -пункт 2\nАмериканский завод по производству кожи разработал..."
-    },
-    {
-      "page": "information",
-      "type": "top",
-      "group": "default",
-      "image": "img/1000001369-Photoroom.png",
-      "title": "Изделия из кожи",
-      "slogan": "Ручной пошив!",
-      "offer": "Как создаются изделия из кожи?",
-      "link": " Ознакомьтесь с нашей мастерской"
     },
     {
       "page": "information",
