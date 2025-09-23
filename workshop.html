@@ -61,7 +61,7 @@
 
 <main class="main">
 
-  <div class="top-page--workshop" style="background-image: url('img/IMG_20250307_090857494.jpg')">
+  <div class="top-page--workshop" style="background-image: url('img/preview/IMG_20250307_090857494.webp')">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
          alt="На расстеленной коричневой шкуре лежат катушка с нитью для ручного пошива, трёхгранная и круглая иглы, ножницы" 
          class="visually-hidden">
@@ -125,51 +125,46 @@
         <button id="okBtn" class="btn-ok">Ok</button>
       </div>
     </div>
-  
+ 
+    <section class="s-articles">
+      <div class="container">
+        <h1 class="s-articles__title">Мастерская</h1>
+        <!-- Контейнер для статей -->
+        <div class="articles-container"></div>
+      </div>
+    </section>
 
+    <div class="container-swiper">  
+      <!-- Swiper -->
+      <div id="sliderSwiper" class="swiper">
+        <div class="swiper-wrapper">
+          
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-<div class="container-swiper">  
-
-<!-- Swiper -->
-  <div id="sliderSwiper" class="swiper">
-    <div class="swiper-wrapper">
-      
+      <!-- TODO - modal -->
+      <div id="modal" class="swiper-modal">
+        <div class="swiper-modal__layer">
+               
+        </div>
+      </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-  </div>
 
-<!-- TODO - modal -->
-<div id="modal" class="swiper-modal">
-  <div class="swiper-modal__layer">
-         
-  </div>
-</div>
+    <section class="s-faq">
+      <div class="container">
+        <h2 class="s-faq__title">Как ухаживать за кожей?</h2>
+        <div class="faq-container faq-container--care"></div>
 
-</div>
+        <h2 class="s-faq__title">Процесс изготовления</h2>
+        <div class="faq-container faq-container--process"></div>
+      </div>
+    </section>
 
-
-<section class="s-articles">
-  <div class="container">
-    <h1 class="s-articles__title">Мастерская</h1>
-    <!-- Контейнер для статей -->
-    <div class="articles-container"></div>
-  </div>
-</section>
-
-<section class="s-faq">
-  <div class="container">
-    <h2 class="s-faq__title">Как ухаживать за кожей?</h2>
-    <div class="faq-container faq-container--care"></div>
-
-    <h2 class="s-faq__title">Процесс изготовления</h2>
-    <div class="faq-container faq-container--process"></div>
-  </div>
-</section>
-
-  <!-- Контейнер для модальных окон -->
-  <div id="modal-container"></div>
+    <!-- Контейнер для модальных окон -->
+    <div id="modal-container"></div>
 
 
       <div class="social-mobile">

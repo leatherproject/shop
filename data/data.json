@@ -178,46 +178,26 @@
       "width2": "35 мм"
     },
     {
-      "page": "ourProducts",
-      "type": "products",
-      "group": "default",
-      "model": "BA0SH0H2",
-      "name": "Сумка женская - шоппер",
-      "preview": "img/shopper.jpg",
-      "imageModal": [
-        "img/leather_shopper_bag-2-1220.jpg",
-        "img/leather_shopper_bag-4-1220.jpg"
-      ],
-      "size": "300 x 150 x 225 мм",
-      "description": "Женская повседневная сумка - шоппер",
-      "price": 2500,
-      "limit": 1,
-      "category": "bag",
-      "color1": "серо-оливковый",
-      "color2": "бежевый",
-      "color3": "светло-коричневый"
-    },
-    {
       "page": "gallery",
       "type": "description",
       "group": "intro",
-      "text": "Творчество, подходы...\nЭксперименты с разными видами кож, ниток и т.д."
+      "text": "Творчество, подходы...\nРабота с разными видами кож, ниток и т.д."
     },
     {
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Изготовлен вручную из натуральной кожи",
-      "alt": "picture 1",
-      "preview": "img/womens_leather_walleto-1-1220.jpg",
-      "imageModal": "img/2-womens_wallet.jpg"
+      "caption": "Женский кошелёк, кожа pull-up",
+      "alt": "кошелёк-клатч из коричневой кожи pull-up",
+      "preview": "img/2-womens_wallet.jpg",
+      "imageModal": "img/2-womens_leather_wallet-2-1220.jpg"
     },
     {
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Просторная и стильная для повседневного использования",
-      "alt": "picture 2",
+      "caption": "Дорожная сумка, плотная кожа, внутреннее дно, метал. ножки",
+      "alt": "дорожная сумка из тёмно-коричневой кожи",
       "preview": "img/leather_travel_bag-1220.jpg",
       "imageModal": "img/leather_travel_bag-1220.jpg"
     },
@@ -225,75 +205,116 @@
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Для повседневного использования",
-      "alt": "picture 3",
-      "preview": "img/red_bag.jpg",
+      "caption": "Повседневная сумка, кожа Valentino (Tempesti)",
+      "alt": "повседневная сумка из рыжей кожи ручной работы",
+      "preview": "img/preview/red_leather_bag-2-1220.webp",
       "imageModal": "img/red_leather_bag-2-1220.jpg"
     },
     {
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Идеальный аксессуар для вашего образа",
-      "alt": "picture 4",
-      "preview": "img/thick_leather_belt-1-1220.jpg",
-      "imageModal": "img/mens_belt.jpg"
+      "caption": "Мужской ремень - чепрак 4 мм, пряжка - полированная нержавейка",
+      "alt": "мужской ремень из чепрака",
+      "preview": "img/mens_belt.jpg ",
+      "imageModal": "img/thick_leather_belt-1-1220.jpg\n"
     },
     {
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Идеальный портфель для повседневных дел",
-      "alt": "picture 5",
-      "preview": "img/brown_briefcase-2-1220.jpg",
-      "imageModal": "img/brown_briefcaseo.jpg"
+      "caption": "Мужской портфель, цвет шоколадный, очень выраженный естественный рисунок на поверхности кожи",
+      "alt": "Мужской портфель ручной работы шоколадного цвета",
+      "preview": "img/preview/brown_briefcase.webp",
+      "imageModal": "img/brown_briefcase.jpg"
     },
     {
       "page": "gallery",
       "type": "pictures",
       "group": "default",
-      "caption": "Сумка для шоппинга",
-      "alt": "picture 6",
+      "caption": "Сумка-шоппер, комбинированная",
+      "alt": "кожаная сумка-шоппер ручной работы",
       "preview": "img/shopper.jpg",
       "imageModal": "img/leather_shopper_bag-2-1220.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "pictures",
+      "group": "default",
+      "caption": "Кошелёк женский",
+      "alt": "женский кошелёк из коричневой кожи снаружи и белой внутри",
+      "preview": "img/preview/IMG_20241118_210940068.webp",
+      "imageModal": "img/IMG_20241118_210940068.jpg"
     },
     {
       "page": "gallery",
       "type": "slider",
       "group": "default",
       "alt": "slide 1",
-      "preview": "img/preview/1000001449-Photoroom.webp",
-      "imageModal": "img/1000001449-Photoroom.png"
+      "preview": "img/preview/red_leather_bag-4-1220.webp",
+      "imageModal": "img/red_leather_bag-4-1220.jpg"
     },
     {
       "page": "gallery",
       "type": "slider",
       "group": "default",
       "alt": "slide 2",
-      "preview": "img/preview/IMG_20250227_143005307_MFNR-1-Photoroom.webp",
-      "imageModal": "img/IMG_20250227_143005307_MFNR-1-Photoroom.png"
+      "preview": "img/preview/red_bag.webp",
+      "imageModal": "img/red_bag.jpg"
     },
     {
       "page": "gallery",
       "type": "slider",
       "group": "default",
       "alt": "slide 3",
-      "preview": "img/preview/IMG_20250303_174249540.webp",
-      "imageModal": "img/IMG_20250303_174249540.jpg"
+      "preview": "img/preview/brown_briefcase-5-1220.webp",
+      "imageModal": "img/brown_briefcase-5-1220.jpg"
     },
     {
       "page": "gallery",
       "type": "slider",
       "group": "default",
       "alt": "slide 4",
+      "preview": "img/preview/brown_briefcase-2-1220.webp",
+      "imageModal": "img/brown_briefcase-2-1220.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 5",
+      "preview": "img/preview/IMG_0942.webp",
+      "imageModal": "img/IMG_0942.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 6",
       "preview": "img/preview/IMG_20250304_181732644.webp",
       "imageModal": "img/IMG_20250304_181732644.jpg"
     },
     {
       "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 7",
+      "preview": "img/preview/IMG_20241118_212644109.webp",
+      "imageModal": "img/IMG_20241118_212644109.jpg"
+    },
+    {
+      "page": "gallery",
+      "type": "slider",
+      "group": "default",
+      "alt": "slide 8",
+      "preview": "img/preview/IMG_20241118_212322168.webp",
+      "imageModal": "img/IMG_20241118_212322168.jpg"
+    },
+    {
+      "page": "gallery",
       "type": "description",
       "group": "details",
-      "text": "Из раннего... Нюансы работы.\nЛистайте карусель"
+      "text": "Немного деталей...\nЛистайте карусель"
     },
     {
       "page": "workshop",
@@ -334,33 +355,41 @@
       "page": "workshop",
       "type": "slider",
       "group": "default",
-      "alt": "team photo 1",
-      "preview": "img/preview/team-1.webp",
-      "imageModal": "img/team-1.jpg"
+      "alt": "photo 1",
+      "preview": "img/preview/IMG_20241126_110404528.webp",
+      "imageModal": "img/IMG_20241126_110404528.jpg"
     },
     {
       "page": "workshop",
       "type": "slider",
       "group": "default",
-      "alt": "team photo 2",
-      "preview": "img/preview/team-2.webp",
-      "imageModal": "img/team-2.jpg"
+      "alt": "photo 1",
+      "preview": "img/preview/IMG_20241128_131317168.webp",
+      "imageModal": "img/IMG_20241128_131317168.jpg"
     },
     {
       "page": "workshop",
       "type": "slider",
       "group": "default",
-      "alt": "team photo 3",
-      "preview": "img/preview/team-3.webp",
-      "imageModal": "img/team-3.jpg"
+      "alt": "photo 2",
+      "preview": "img/preview/IMG_20250303_174249540.webp",
+      "imageModal": "img/IMG_20250303_174249540.jpg"
     },
     {
       "page": "workshop",
       "type": "slider",
       "group": "default",
-      "alt": "team photo 4",
-      "preview": "img/preview/team-4.webp",
-      "imageModal": "img/team-4.jpg"
+      "alt": "photo 3",
+      "preview": "img/preview/IMG_20250303_175919797.webp",
+      "imageModal": "img/IMG_20250303_175919797.jpg"
+    },
+    {
+      "page": "workshop",
+      "type": "slider",
+      "group": "default",
+      "alt": "photo 4",
+      "preview": "img/preview/IMG_20241112_171352354.webp",
+      "imageModal": "img/IMG_20241112_171352354.jpg"
     },
     {
       "page": "workshop",
