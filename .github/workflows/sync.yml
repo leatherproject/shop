@@ -4,7 +4,7 @@ name: Sync Google Drive JSON
 on:
   schedule:
     # Запускать каждый день в 14 часов 0 минут по UTC.
-    - cron: '5 11 * * *' 
+    - cron: '12 11 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -18,8 +18,8 @@ jobs:
     - name: Download JSON from Google Drive
       # Скачивание и сохранение файла ПРЯМО В ПАПКУ data/
       run: |
-        DRIVE_ID="https://drive.google.com/uc?export=download&id=1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH" # <--- ОБЯЗАТЕЛЬНО ЗАМЕНИТЬ!
-        DOWNLOAD_URL="1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH"
+        DRIVE_ID="1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH" # <--- ОБЯЗАТЕЛЬНО ЗАМЕНИТЬ!
+        DOWNLOAD_URL="https://drive.google.com/uc?export=download&id=1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH"
         # Скачиваем файл и сохраняем его как data/data.json
         curl -L "$DOWNLOAD_URL" -o data/data.json
         
