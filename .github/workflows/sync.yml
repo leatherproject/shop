@@ -4,7 +4,7 @@ name: Sync Google Drive JSON
 on:
   schedule:
     # Запускать каждый день в 14 часов 0 минут по UTC.
-    - cron: '12 11 * * *' 
+    - cron: '39 11 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
       # Указываем, что нужно отслеживать файл по новому пути
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        files: data/data.json # <-- ОБНОВЛЕННЫЙ ПУТЬ
+        file_pattern: data/data.json # <-- ОБНОВЛЕННЫЙ ПУТЬ
         commit_message: "Automated: Update data.json from Google Drive"
         commit_user_name: GitHub Actions Bot
         commit_user_email: actions@github.com
