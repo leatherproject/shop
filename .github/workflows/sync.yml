@@ -1,10 +1,12 @@
-name: Sync Google Drive JSON
 
-# 1. Запуск ежедневно в 14:00 по UTC
+        
+        
+        name: Sync Google Drive JSON
+
+# Установлено на 14:12 по Николаеву (11:12 UTC). workflow_dispatch подтверждает ручной запуск.
 on:
   schedule:
-    # Запускать каждый день в 14 часов 0 минут по UTC.
-    - cron: '39 11 * * *' 
+    - cron: '12 11 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -12,22 +14,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      # Загружает код, включая папку /data
       uses: actions/checkout@v4
 
-    - name: Download JSON from Google Drive
-      # Скачивание и сохранение файла ПРЯМО В ПАПКУ data/
+    - name: Download JSON from Google Drive and Validate
       run: |
-        DRIVE_ID="1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH" # <--- ОБЯЗАТЕЛЬНО ЗАМЕНИТЬ!
+        DRIVE_ID="1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH"
         DOWNLOAD_URL="https://drive.google.com/uc?export=download&id=1aYWqdRjy6q9rIM_QlwgoTfGr8yUpIcPH"
-        # Скачиваем файл и сохраняем его как data/data.json
-        curl -L "$DOWNLOAD_URL" -o data/data.json
+        OUTPUT_PATH="data/data.json"
         
+        echo "Attempting to download file from Google Drive..."
+        
+        # 1. Используем агрессивный curl с обработкой cookies для стабильности
+        curl -L -c /tmp/cookies.txt "$DOWNLOAD_URL" -o "$OUTPUT_PATH"
+        
+        # 2. Диагностика: Проверяем размер скачанного файла
+        FILE_SIZE=$(wc -c < "$OUTPUT_PATH")
+        echo "::notice::Downloaded file size: $FILE_SIZE bytes."
+        
+        # 3. Проверка на ошибку Google: Предотвращает коммит HTML
+        if [ $FILE_SIZE -lt 500 ]; then
+          echo "::error::Downloaded file is suspiciously small ($FILE_SIZE bytes). Google Drive likely returned an error page."
+          exit 1 # Завершаем Action с ошибкой
+        fi
+
     - name: Commit and Push if file changed
-      # Указываем, что нужно отслеживать файл по новому пути
-      uses: stefanzweifel/git-auto-commit-action@v5
+      # ИСПРАВЛЕНИЕ: Используем версию v4, которая корректно работает с параметром 'files'
+      uses: stefanzweifel/git-auto-commit-action@v4 
       with:
-        file_pattern: data/data.json # <-- ОБНОВЛЕННЫЙ ПУТЬ
+        files: data/data.json # <-- ИСПРАВЛЕНО: используем 'files'
         commit_message: "Automated: Update data.json from Google Drive"
         commit_user_name: GitHub Actions Bot
         commit_user_email: actions@github.com
