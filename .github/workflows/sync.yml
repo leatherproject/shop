@@ -3,7 +3,7 @@
         
         name: Sync Google Drive JSON
 
-# Установлено на 14:12 по Николаеву (11:12 UTC). workflow_dispatch подтверждает ручной запуск.
+# Разрешает запуск по расписанию и вручную
 on:
   schedule:
     - cron: '12 11 * * *' 
@@ -24,24 +24,24 @@ jobs:
         
         echo "Attempting to download file from Google Drive..."
         
-        # 1. Используем агрессивный curl с обработкой cookies для стабильности
+        # Агрессивный curl для обхода перенаправлений Google
         curl -L -c /tmp/cookies.txt "$DOWNLOAD_URL" -o "$OUTPUT_PATH"
         
-        # 2. Диагностика: Проверяем размер скачанного файла
+        # Проверка размера скачанного файла
         FILE_SIZE=$(wc -c < "$OUTPUT_PATH")
         echo "::notice::Downloaded file size: $FILE_SIZE bytes."
         
-        # 3. Проверка на ошибку Google: Предотвращает коммит HTML
+        # Если скачанный файл слишком мал (вероятно, HTML-ошибка), останавливаем Action
         if [ $FILE_SIZE -lt 500 ]; then
           echo "::error::Downloaded file is suspiciously small ($FILE_SIZE bytes). Google Drive likely returned an error page."
-          exit 1 # Завершаем Action с ошибкой
+          exit 1 
         fi
 
     - name: Commit and Push if file changed
       # ИСПРАВЛЕНИЕ: Используем версию v4, которая корректно работает с параметром 'files'
       uses: stefanzweifel/git-auto-commit-action@v4 
       with:
-        files: data/data.json # <-- ИСПРАВЛЕНО: используем 'files'
+        files: data/data.json # <-- ИСПОЛЬЗУЕМ 'files'
         commit_message: "Automated: Update data.json from Google Drive"
         commit_user_name: GitHub Actions Bot
         commit_user_email: actions@github.com
