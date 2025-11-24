@@ -29,29 +29,11 @@
       "page": "ourProducts",
       "type": "products",
       "group": "default",
-      "model": "RWOOD0NIC3M",
-      "name": "Ремень мужской",
+      "model": "RWOOD0",
+      "name": "Ремень мужской/женский",
       "preview": "img/IMG_RWOOD0NIC3M.jpg",
       "imageModal": [
-        "img/IMG_RWOOD0NIC3M.jpg"
-      ],
-      "size": "Индивидуально",
-      "description": "Ремень мужской, кожа - ременной ворот, толщ. 3-3,5 мм",
-      "price": 950,
-      "limit": 4,
-      "category": "belt",
-      "color1": "бордово-коричневый",
-      "width1": "40 мм",
-      "width2": "35 мм"
-    },
-    {
-      "page": "ourProducts",
-      "type": "products",
-      "group": "default",
-      "model": "RWOOD0ANT2M",
-      "name": "Ремень мужской",
-      "preview": "img/webp/IMG_RWOOD0ANT2M_2.webp",
-      "imageModal": [
+        "img/IMG_RWOOD0NIC3M.jpg",
         "img/IMG_RWOOD0ANT2M_2.jpg",
         "img/IMG_RWOOD0ANT2M_1.jpg"
       ],
@@ -138,7 +120,7 @@
       "page": "ourProducts",
       "type": "products",
       "group": "default",
-      "model": "EDGE0NIC2M",
+      "model": "EDGE0",
       "name": "Ремень мужской/женский",
       "preview": "img/webp/IMG_EDGE0NIC2M_1.webp",
       "imageModal": [
@@ -161,7 +143,7 @@
       "page": "ourProducts",
       "type": "products",
       "group": "default",
-      "model": "GGRO0NIC2M",
+      "model": "GGRO0",
       "name": "Ремень мужской/женский",
       "preview": "img/webp/IMG_GGRO0NIC2M_2.webp",
       "imageModal": [
@@ -466,4 +448,5 @@
     }
   ]
 }
+
 
